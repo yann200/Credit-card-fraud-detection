@@ -1,6 +1,7 @@
 streamlit
 plotly
 pandas
+joblib
 matplotlib
 scikit-learn
 seaborn
