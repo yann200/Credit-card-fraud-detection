@@ -52,7 +52,7 @@ df = pd.read_csv("data/creditcard.csv")
 
 st.sidebar.title("Credit Card Fraud Detection")
 
-pages = ["project Context", "Data Exploratory", "Data Analysis" ,"Data Preprocessing", "Modeling", "Conclusion"]
+pages = ["project Context", "Data Exploratory", "Data Analysis" ,"Data Preprocessing", "Modeling", "Deployment","Conclusion"]
 
 
 page = st.sidebar.radio("Select a page", pages)
@@ -624,14 +624,93 @@ score a la fois dans les ensembles d entrainements et de validation croisee
     st.write(f"**F1-score :** {f1:.4f}")
 
 
+elif page == pages[5]:
 
+    
+    st.title("Déploiement du Projet")
+    st.image("img/pipeline_github_actions.png")
+    st.markdown("""
 
+Pour rendre l’application de détection de fraude accessible et facile à mettre à jour,  
+nous avons mis en place un processus complet de déploiement dans le cloud en utilisant les services d’AWS.  
+L’objectif est d’automatiser totalement la mise en production du modèle afin de garantir **fiabilité**,  
+**sécurité** et **continuité de service**.
 
+---
 
+###  Étapes du déploiement
 
+1. **Préparation du compte AWS**  
+2. **Mise en place du registre d’images (ECR)**  
+3. **Déploiement d’une instance EC2**  
+4. **Configuration de l’EC2 comme runner GitHub Actions**  
+5. **Gestion des accès via GitHub Secrets**  
+6. **Construction de l’image Docker** à partir du code mis à jour  
+7. **Enregistrement de l’image dans ECR**  
+8. **Récupération de l’image depuis EC2**  
+9. **Lancement / mise à jour du conteneur**, déployant ainsi la nouvelle version
 
+---
 
+###  Bénéfices du pipeline
 
+Grâce à ce pipeline complet basé sur **AWS**, **Docker** et **GitHub Actions**, l’application est désormais :
+
+- automatiquement déployée après chaque changement,  
+- rapidement accessible en environnement cloud,  
+- sécurisée et facilement maintenable,  
+- alignée avec les standards DevOps modernes.  
+
+Ce dispositif assure une mise en production **fluide**, **fiable** et **adaptée au métier**.
+""")
+
+    st.image("img/image_deploiement.png", width=400)
+
+else:
+    st.write("## Conclusion")
+    st.markdown("""
+# Détection de Fraude Bancaire
+
+Dans ce projet, nous avons développé un système de **détection de fraude bancaire** en appliquant plusieurs techniques de **prétraitement** et différents **algorithmes de Machine Learning**.
+
+---
+
+## Prétraitement des données
+
+Pour améliorer la qualité des données et l’équilibre du jeu de données, nous avons appliqué :
+- **Random Under-Sampling** pour équilibrer les classes.
+- **Suppression des outliers** pour améliorer la qualité des données.
+
+---
+
+## Modèles testés
+
+Plusieurs modèles ont été évalués :
+- **Régression Logistique**
+- **Random Forest**
+- **K-Nearest Neighbors (KNN)**
+- **Support Vector Machine (SVM)**
+
+---
+
+## Résultats et performances
+
+L’évaluation a montré que **la Régression Logistique** est le modèle le plus performant pour cette tâche.  
+Elle se distingue par :
+- **ROC-AUC élevée** : bonne capacité à séparer fraudes et non-fraudes.
+- **Scores d’entraînement et de validation stables** : bon compromis biais/variance.
+- **Stabilité lors de la validation croisée**.
+
+Les autres modèles ont présenté :
+- **Random Forest & KNN** : risque de surapprentissage.
+- **SVM** : performances moins stables.
+
+---
+
+## Conclusion
+
+La combinaison de **nettoyage des données**, **rééquilibrage des classes** et **analyse comparative des algorithmes** a permis de construire un modèle fiable, capable de **détecter efficacement les transactions frauduleuses**.
+""")
 
 
 
