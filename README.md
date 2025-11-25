@@ -36,7 +36,7 @@ C’est pourquoi les banques s’appuient désormais sur des approches data-driv
 1. Page d'accueil:
 ![Page d'accueil](img/accueil.png)
 2. Quelques visualisations
-![img 1](img/viz1.png)
+![img 1](img/vis1.png)
 
 ![img 2](img/viz2.png)
 
