@@ -27,22 +27,22 @@ C’est pourquoi les banques s’appuient désormais sur des approches data-driv
 
 ### Architecture de déploiement
 
-![Architecture Deploiement](img\deploy_diagram_screemshot.png)
+![Architecture Deploiement](img/deploy_diagram_screemshot.png)
 
 **L’application est déployée sur AWS. Toutefois, par mesure de sécurité, j’ai choisi de fermer le port d’accès.**
 
 ### Présentation des interfaces.
 
 1. Page d'accueil:
-![Page d'accueil](img\accueil.png)
+![Page d'accueil](img/accueil.png)
 2. Quelques visualisations
-![img 1](img\viz1.png)
+![img 1](img/viz1.png)
 
-![img 2](img\viz2.png)
+![img 2](img/viz2.png)
 
-![img 3](img\viz3.png)
+![img 3](img/viz3.png)
 3. Résultats d'entrainement de quelques modèles :
-![img 4](img\viz4.png)
+![img 4](img/viz4.png)
 
 ### Technologies utilisées
 
